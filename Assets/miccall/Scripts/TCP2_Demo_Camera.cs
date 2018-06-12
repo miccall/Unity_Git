@@ -21,7 +21,6 @@ public class TCP2_Demo_Camera : MonoBehaviour
 	public float ZoomDistMax = 2f;
 	[Header("Misc")]
 	public float Decceleration = 8f;
-	public RectTransform ignoreMouseRect;
 
 	//--------------------------------------------------------------------------------------------------
 	// PRIVATE PROPERTIES
@@ -63,7 +62,7 @@ public class TCP2_Demo_Camera : MonoBehaviour
 		mouseDelta.x = Mathf.Clamp(mouseDelta.x, -150f, 150f);
 		mouseDelta.y = Mathf.Clamp(mouseDelta.y, -150f, 150f);
 
-		bool ignoreMouse = ignoreMouseRect.rect.Contains(Input.mousePosition);
+		bool ignoreMouse = false ;
 
 		if(Input.GetMouseButtonDown(0))
 			leftMouseHeld = !ignoreMouse;
